@@ -48,12 +48,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 'GCP auth'
-        uses: 'google-github-actions/auth@v2'
-        if: ${{ inputs.is_emerynet_test }}
-        with:
-          project_id: 'simulationlab'
-          workload_identity_provider: 'projects/60745596728/locations/global/workloadIdentityPools/github/providers/dapp-inter'
+      # - name: 'GCP auth'
+      #   uses: 'google-github-actions/auth@v2'
+      #   if: ${{ inputs.is_emerynet_test }}
+      #   with:
+      #     project_id: 'simulationlab'
+      #     workload_identity_provider: 'projects/60745596728/locations/global/workloadIdentityPools/github/providers/dapp-inter'
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
